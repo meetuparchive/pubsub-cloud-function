@@ -21,7 +21,7 @@ test(`acks messages`, (t) => {
     }
   }
   const sample = getSample();
-  sample.program.deploy_complete(event, callback)
+  sample.program.{{ FUNCTION_NAME }}(event, callback)
   t.deepEqual(callback.callCount, 1)
   t.deepEqual(callback.firstCall.args, [])
 });
