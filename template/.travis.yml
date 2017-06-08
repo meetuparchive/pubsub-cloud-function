@@ -1,0 +1,46 @@
+sudo: false
+language: bash
+
+cache:
+  pip: true
+  directories:
+    - node_modules
+    - "$HOME/google-cloud-sdk/"
+
+# Only build pushes to master.
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+
+before_install:
+  # Install envtpl for easy templating.
+  - pip install --user envtpl
+  - export PATH="$PATH:${HOME}/.local/bin/"
+
+  # Install or update GCloud
+  - >
+    if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then
+      rm -rf $HOME/google-cloud-sdk;
+      curl https://sdk.cloud.google.com | bash;
+    fi
+  - source "$HOME/google-cloud-sdk/path.bash.inc"
+  - gcloud --quiet version
+  - gcloud --quiet components update
+
+  # Authenticate GCloud
+  - echo $GCP_SECRET > client-secret.json
+  - gcloud auth activate-service-account --key-file client-secret.json
+
+script:
+  make test
+
+deploy:
+  - provider: script
+    script: make deploy
+    skip_cleanup: true
+    on:
+      branch: master

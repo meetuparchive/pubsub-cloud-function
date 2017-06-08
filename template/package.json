@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "dotenv": "4.0.0",
+    "safe-buffer": "5.0.1"
+  },
+  "scripts": {
+    "test": "ava -T 20s --verbose test/*.test.js"
+  },
+  "devDependencies": {
+    "ava": "0.19.1",
+    "proxyquire": "1.7.11",
+    "sinon": "2.1.0"
+  }
+}
