@@ -1,6 +1,8 @@
 # pubsub-cloud-function
 
-> a [porteurbars](https://github.com/softprops/porteurbars) template for generating pubsub triggered google cloud functions, bootstrapped for travis integration for continuous git push based deployments
+> a [porteurbars](https://github.com/softprops/porteurbars) template for generating goggle [pubsub](https://cloud.google.com/pubsub/docs/overview) triggered [google cloud functions](https://cloud.google.com/functions/), bootstrapped for travis integration for continuous git push based deployments
+
+![demo.gif](demo.gif)
 
 ## usage
 
