@@ -2,8 +2,10 @@
 
 ## usage
 
-To send this function messages
+To send this function messages, publish a message to the {{ PUBSUB_TOPIC }} pubsub
+topic
 
 ```bash
-$  gcloud beta pubsub topics publish {{ PUBSUB_TOPIC }} '{"hello":"world"}'
+$ gcloud beta pubsub topics publish {{ PUBSUB_TOPIC }} '{"hello":"world"}'
+$ gcloud beta functions logs read --limit 5 {{ FUNCTION_NAME }}
 ```
