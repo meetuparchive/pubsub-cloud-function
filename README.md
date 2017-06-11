@@ -6,7 +6,7 @@
 
 ## usage
 
-The following should promote you for the following values
+The following should prompt you for the following values
 
 ```bash
 $ porteurbars meetup/pubsub-cloud-function
