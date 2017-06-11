@@ -12,13 +12,13 @@ The following should prompt you for the following values
 $ porteurbars meetup/pubsub-cloud-function
 ```
 
-| Name            | Default value | Description                                               |
-|-----------------|---------------|-----------------------------------------------------------|
-| GCP_PROJECT     | ai-blt        | name of google cloud platform project                     |
-| STAGE_BUCKET    | func_town     | name of google storage bucket to store staged coded under |
-| FUNCTION_NAME   | func_town     | name of exported function to deploy                       |
-| FUNCTION_MEMORY | 128MB         | amount of memory to allocation in deployments             |
-| PUBSUB_TOPIC    | func_town     | name of gcp pubsub topic to subscribe to                  |
+| Name            | Default value | Description                                                            |
+|-----------------|---------------|------------------------------------------------------------------------|
+| GCP_PROJECT     | ai-blt        | name of google cloud platform project                                  |
+| STAGE_BUCKET    | func_town     | name of google storage bucket to store staged coded under              |
+| FUNCTION_NAME   | func_town     | name of exported function to deploy, this should be unique per project |
+| FUNCTION_MEMORY | 128MB         | amount of memory to allocation in deployments                          |
+| PUBSUB_TOPIC    | func_town     | name of gcp pubsub topic to subscribe to                               |
 
 
 `GCP_PROJECT` Name must start with a letter followed by up to 47 letters, numbers, or hyphens, and cannot end with a hyphen.
