@@ -25,7 +25,7 @@ __deploy-only: ## Deploy function
 	  deploy $(FUNCTION_NAME) \
 		--stage-bucket $(STAGE_BUCKET) \
 		--memory $(FUNCTION_MEMORY) \
-		---trigger-topic $(PUBSUB_TOPIC)
+		--trigger-topic $(PUBSUB_TOPIC)
 
 __ensure-bucket: ## Create staging bucket if one does not already exist
 	@(gsutil mb gs://$(STAGE_BUCKET) 2>/dev/null && echo "created bucket") || echo "bucket exists"
