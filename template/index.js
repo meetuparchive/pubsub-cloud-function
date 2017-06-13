@@ -1,3 +1,5 @@
+'use strict';
+
 require('dotenv').config()
 
 const Buffer = require('safe-buffer').Buffer;
