@@ -31,7 +31,7 @@ __ensure-bucket: ## Create staging bucket if one does not already exist
 	@(gsutil mb gs://$(STAGE_BUCKET) 2>/dev/null && echo "created bucket") || echo "bucket exists"
 
 __ensure-topic: ## Create topic if one does not already exist
-	@(gcloud beta pubsub topics create deploy-complete $(PUBSUB_TOPIC) 2>/dev/null && echo "created topic") || echo "topic exists"
+	@(gcloud beta pubsub topics create $(PUBSUB_TOPIC) 2>/dev/null && echo "created topic") || echo "topic exists"
 
 __set-project: ## Sets gcp project in context
 	@gcloud config set project $(GCP_PROJECT)
