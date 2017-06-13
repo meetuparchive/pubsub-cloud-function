@@ -1,5 +1,8 @@
-sudo: false
+sudo: required
 language: bash
+
+services:
+  - docker
 
 cache:
   pip: true
@@ -18,8 +21,7 @@ env:
 
 before_install:
   # Install envtpl for easy templating.
-  - pip install --user envtpl
-  - export PATH="$PATH:${HOME}/.local/bin/"
+  - sudo pip install envtpl
 
   # Install or update GCloud
   - >
