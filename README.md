@@ -25,6 +25,10 @@ $ porteurbars meetup/pubsub-cloud-function
 
 `FUNCTION_MEMORY` values must be one of `28MB`, `256MB`, `512MB`, `1024MB` and `2048MB`.
 
+`PUBSUB_TOPIC` must follow the `resource-name` rules defined [here](https://cloud.google.com/pubsub/docs/overview#names)
+
+`STAGE_BUCKET` must following the rules defined [here](https://cloud.google.com/storage/docs/naming#requirements)
+
 ## testing
 
 This template provides a default test harness. You can run tests with the following
