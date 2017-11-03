@@ -1,0 +1,4 @@
+.git
+.gitignore
+.env.yaml.tmpl
+node_modules
